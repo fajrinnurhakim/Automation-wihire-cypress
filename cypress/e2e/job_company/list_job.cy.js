@@ -16,4 +16,8 @@ describe("Wihire Website", () => {
     it("Display list dropdown", () => {
         list_job.listDropdown();
     });
+
+    it("view Job", () => {
+        list_job.viewJob();
+    });
 });
