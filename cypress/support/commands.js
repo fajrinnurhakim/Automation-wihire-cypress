@@ -11,10 +11,11 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-Cypress.Commands.add("loginCommand", (email, password) => {
+Cypress.Commands.add("loginSuccess", (email, password) => {
     cy.get("#email").type(email);
     cy.get("#password").type(password);
-    cy.get(".btn.btn-secondary").contains("Login").click();
+    cy.get(".btn.btn-primary").contains("Login").click();
+    cy.url().should("include", "/jobs");
 });
 
 Cypress.Commands.add(
