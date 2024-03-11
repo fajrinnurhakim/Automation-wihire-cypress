@@ -1,6 +1,12 @@
 import login from "../login";
 
 class listJob {
+    viewJob() {
+        login.loginAsJobCompany();
+        cy.wait(3000);
+        cy.get("div>div>a").eq(0).click();
+    }
+
     listCategory() {
         login.loginAsJobCompany();
         cy.wait(3000);
