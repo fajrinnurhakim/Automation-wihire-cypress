@@ -9,7 +9,9 @@ module.exports = defineConfig({
         env: {
             BASE_URL: process.env.BASE_URL,
             email_login: process.env.LOGIN_EMAIL,
+            email_login2: process.env.LOGIN_EMAIL2,
             password_login: process.env.LOGIN_PASSWORD,
+            password_login2: process.env.LOGIN_PASSWORD2,
             name_register: process.env.REGISTER_EMAIL,
             email_register: process.env.REGISTER_EMAIL,
             password_register: process.env.REGISTER_PASSWORD,
