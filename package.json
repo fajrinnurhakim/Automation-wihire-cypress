@@ -2,6 +2,7 @@
     "devDependencies": {
         "cypress": "^13.6.6",
         "cypress-dotenv": "^2.0.0",
+        "cypress-file-upload": "^5.0.8",
         "dotenv": "^16.4.5"
     },
     "scripts": {
