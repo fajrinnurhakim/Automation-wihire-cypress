@@ -8,26 +8,47 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
-            - name: Create env file
-              run: echo "LOGIN_EMAIL=${{ vars.LOGIN_EMAIL }}" > .env
-                  echo "LOGIN_EMAIL2=${{ vars.LOGIN_EMAIL2 }}" >> .env
-                  echo "LOGIN_PASSWORD=${{ vars.LOGIN_PASSWORD }}" >> .env
-                  echo "LOGIN_PASSWORD2=${{ vars.LOGIN_PASSWORD2 }}" >> .env
-                  echo "REGISTER_NAME=${{ vars.REGISTER_NAME }}" >> .env
-                  echo "REGISTER_EMAIL=${{ vars.REGISTER_EMAIL }}" >> .env
-                  echo "REGISTER_PASSWORD=${{ vars.REGISTER_PASSWORD }}" >> .env
-                  echo "REGISTER_CONFIRM_PASSWORD=${{ vars.REGISTER_CONFIRM_PASSWORD }}" >> .env
-                  echo "REGISTER_PROVINCE=${{ vars.REGISTER_PROVINCE }}" >> .env
-                  echo "REGISTER_ADDRESS=${{ vars.REGISTER_ADDRESS }}" >> .env
-                  echo "REGISTER_COMPANY_SCOPE=${{ vars.REGISTER_COMPANY_SCOPE }}" >> .env
-                  echo "REGISTER_TOTAL_EMPLOYEE=${{ vars.REGISTER_TOTAL_EMPLOYEE }}" >> .env
-                  echo "REGISTER_GENDER=${{ vars.REGISTER_GENDER }}" >> .env
-                  echo "REGISTER_DATE=${{ vars.REGISTER_DATE }}" >> .env
-                  echo "REGISTER_PHONE=${{ vars.REGISTER_PHONE }}" >> .env
-                  echo "BASE_URL=${{ vars.BASE_URL }}" >> .env
-
-            - name: Display env file
-              run: cat .env
-
-            - name: Cypress run
+            - name: test
               uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/test.cy.js
+
+            - name: register
+              uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/register.cy.js
+
+            - name: login
+              uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/login.cy.js
+
+            - name: job company list job
+              uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/job_company/list_job.cy.js
+
+            - name: job company create job
+              uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/job_company/create_job.cy.js
+
+            - name: job company draft job
+              uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/job_company/draft_job.cy.js
+
+            - name: job seeker list job
+              uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/job_seeker/list_job.cy.js
+
+            - name: job seeker draft job
+              uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/job_seeker/save_job.cy.js
+
+            - name: job seeker draft job
+              uses: cypress-io/github-action@v6
+              with:
+                  spec: cypress/e2e/job_seeker/application.cy.js

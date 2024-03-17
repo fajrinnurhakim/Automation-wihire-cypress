@@ -1,5 +1,4 @@
 const { defineConfig } = require("cypress");
-require("dotenv").config();
 
 module.exports = defineConfig({
     e2e: {
@@ -7,22 +6,22 @@ module.exports = defineConfig({
             // implement node event listeners here
         },
         env: {
-            BASE_URL: process.env.BASE_URL,
-            email_login: process.env.LOGIN_EMAIL,
-            email_login2: process.env.LOGIN_EMAIL2,
-            password_login: process.env.LOGIN_PASSWORD,
-            password_login2: process.env.LOGIN_PASSWORD2,
-            name_register: process.env.REGISTER_EMAIL,
-            email_register: process.env.REGISTER_EMAIL,
-            password_register: process.env.REGISTER_PASSWORD,
-            password_confirm_register: process.env.REGISTER_CONFIRM_PASSWORD,
-            province_register: process.env.REGISTER_PROVINCE,
-            address_register: process.env.REGISTER_ADDRESS,
-            company_scope_register: process.env.REGISTER_COMPANY_SCOPE,
-            total_employee_register: process.env.REGISTER_TOTAL_EMPLOYEE,
-            gender_register: process.env.REGISTER_GENDER,
-            date_register: process.env.REGISTER_DATE,
-            phone_register: process.env.REGISTER_PHONE,
+            BASE_URL: "https://wihire.vercel.app/",
+            email_login: "nurhakimfajrin123@gmail.com",
+            email_login2: "roihana.asfiati1996@gmail.com",
+            password_login: "Okkynak11",
+            password_login2: "Okkynak13",
+            name_register: "sventh7",
+            email_register: "sventh@gmail.com",
+            password_register: "Sventh123",
+            password_confirm_register: "Sventh123",
+            province_register: "RIAU",
+            address_register: "KABUPATEN PELALAWAN",
+            company_scope_register: "Accounting",
+            total_employee_register: "11-50 Employees",
+            gender_register: "Female",
+            date_register: "2001-11-11",
+            phone_register: "https://wihire.vercel.app/",
         },
         viewportWidth: 1200,
         viewportHeight: 800,
