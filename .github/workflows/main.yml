@@ -9,22 +9,22 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Create env file
-              run: echo "LOGIN_EMAIL=${{ secrets.LOGIN_EMAIL }}" > .env
-                  echo "LOGIN_EMAIL2=${{ secrets.LOGIN_EMAIL2 }}" >> .env
-                  echo "LOGIN_PASSWORD=${{ secrets.LOGIN_PASSWORD }}" >> .env
-                  echo "LOGIN_PASSWORD2=${{ secrets.LOGIN_PASSWORD2 }}" >> .env
-                  echo "REGISTER_NAME=${{ secrets.REGISTER_NAME }}" >> .env
-                  echo "REGISTER_EMAIL=${{ secrets.REGISTER_EMAIL }}" >> .env
-                  echo "REGISTER_PASSWORD=${{ secrets.REGISTER_PASSWORD }}" >> .env
-                  echo "REGISTER_CONFIRM_PASSWORD=${{ secrets.REGISTER_CONFIRM_PASSWORD }}" >> .env
-                  echo "REGISTER_PROVINCE=${{ secrets.REGISTER_PROVINCE }}" >> .env
-                  echo "REGISTER_ADDRESS=${{ secrets.REGISTER_ADDRESS }}" >> .env
-                  echo "REGISTER_COMPANY_SCOPE=${{ secrets.REGISTER_COMPANY_SCOPE }}" >> .env
-                  echo "REGISTER_TOTAL_EMPLOYEE=${{ secrets.REGISTER_TOTAL_EMPLOYEE }}" >> .env
-                  echo "REGISTER_GENDER=${{ secrets.REGISTER_GENDER }}" >> .env
-                  echo "REGISTER_DATE=${{ secrets.REGISTER_DATE }}" >> .env
-                  echo "REGISTER_PHONE=${{ secrets.REGISTER_PHONE }}" >> .env
-                  echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+              run: echo "LOGIN_EMAIL=${{ vars.LOGIN_EMAIL }}" > .env
+                  echo "LOGIN_EMAIL2=${{ vars.LOGIN_EMAIL2 }}" >> .env
+                  echo "LOGIN_PASSWORD=${{ vars.LOGIN_PASSWORD }}" >> .env
+                  echo "LOGIN_PASSWORD2=${{ vars.LOGIN_PASSWORD2 }}" >> .env
+                  echo "REGISTER_NAME=${{ vars.REGISTER_NAME }}" >> .env
+                  echo "REGISTER_EMAIL=${{ vars.REGISTER_EMAIL }}" >> .env
+                  echo "REGISTER_PASSWORD=${{ vars.REGISTER_PASSWORD }}" >> .env
+                  echo "REGISTER_CONFIRM_PASSWORD=${{ vars.REGISTER_CONFIRM_PASSWORD }}" >> .env
+                  echo "REGISTER_PROVINCE=${{ vars.REGISTER_PROVINCE }}" >> .env
+                  echo "REGISTER_ADDRESS=${{ vars.REGISTER_ADDRESS }}" >> .env
+                  echo "REGISTER_COMPANY_SCOPE=${{ vars.REGISTER_COMPANY_SCOPE }}" >> .env
+                  echo "REGISTER_TOTAL_EMPLOYEE=${{ vars.REGISTER_TOTAL_EMPLOYEE }}" >> .env
+                  echo "REGISTER_GENDER=${{ vars.REGISTER_GENDER }}" >> .env
+                  echo "REGISTER_DATE=${{ vars.REGISTER_DATE }}" >> .env
+                  echo "REGISTER_PHONE=${{ vars.REGISTER_PHONE }}" >> .env
+                  echo "BASE_URL=${{ vars.BASE_URL }}" >> .env
 
             - name: Display env file
               run: cat .env
