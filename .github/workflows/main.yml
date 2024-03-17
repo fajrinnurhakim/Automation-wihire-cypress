@@ -1,33 +1,33 @@
 name: Cypress End-to-end tests
 on: push
+
 jobs:
-  cypress-run:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    cypress-run:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
 
-      - name: Create env file
-        run: |
-          echo "LOGIN_EMAIL=${{ secrets.LOGIN_EMAIL }}" > .env
-          echo "LOGIN_EMAIL2=${{ secrets.LOGIN_EMAIL2 }}" >> .env
-          echo "LOGIN_PASSWORD=${{ secrets.LOGIN_PASSWORD }}" >> .env
-          echo "LOGIN_PASSWORD2=${{ secrets.LOGIN_PASSWORD2 }}" >> .env
-          echo "REGISTER_NAME=${{ secrets.REGISTER_NAME }}" >> .env
-          echo "REGISTER_EMAIL=${{ secrets.REGISTER_EMAIL }}" >> .env
-          echo "REGISTER_PASSWORD=${{ secrets.REGISTER_PASSWORD }}" >> .env
-          echo "REGISTER_CONFIRM_PASSWORD=${{ secrets.REGISTER_CONFIRM_PASSWORD }}" >> .env
-          echo "REGISTER_PROVINCE=${{ secrets.REGISTER_PROVINCE }}" >> .env
-          echo "REGISTER_ADDRESS=${{ secrets.REGISTER_ADDRESS }}" >> .env
-          echo "REGISTER_COMPANY_SCOPE=${{ secrets.REGISTER_COMPANY_SCOPE }}" >> .env
-          echo "REGISTER_TOTAL_EMPLOYEE=${{ secrets.REGISTER_TOTAL_EMPLOYEE }}" >> .env
-          echo "REGISTER_GENDER=${{ secrets.REGISTER_GENDER }}" >> .env
-          echo "REGISTER_DATE=${{ secrets.REGISTER_DATE }}" >> .env
-          echo "REGISTER_PHONE=${{ secrets.REGISTER_PHONE }}" >> .env
-          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+            - name: Create env file
+              run: echo "LOGIN_EMAIL=$LOGIN_EMAIL" > .env &&
+                  echo "LOGIN_EMAIL2=$LOGIN_EMAIL2" >> .env &&
+                  echo "LOGIN_PASSWORD=$LOGIN_PASSWORD" >> .env &&
+                  echo "LOGIN_PASSWORD2=$LOGIN_PASSWORD2" >> .env &&
+                  echo "REGISTER_NAME=$REGISTER_NAME" >> .env &&
+                  echo "REGISTER_EMAIL=$REGISTER_EMAIL" >> .env &&
+                  echo "REGISTER_PASSWORD=$REGISTER_PASSWORD" >> .env &&
+                  echo "REGISTER_CONFIRM_PASSWORD=$REGISTER_CONFIRM_PASSWORD" >> .env &&
+                  echo "REGISTER_PROVINCE=$REGISTER_PROVINCE" >> .env &&
+                  echo "REGISTER_ADDRESS=$REGISTER_ADDRESS" >> .env &&
+                  echo "REGISTER_COMPANY_SCOPE=$REGISTER_COMPANY_SCOPE" >> .env &&
+                  echo "REGISTER_TOTAL_EMPLOYEE=$REGISTER_TOTAL_EMPLOYEE" >> .env &&
+                  echo "REGISTER_GENDER=$REGISTER_GENDER" >> .env &&
+                  echo "REGISTER_DATE=$REGISTER_DATE" >> .env &&
+                  echo "REGISTER_PHONE=$REGISTER_PHONE" >> .env &&
+                  echo "BASE_URL=$BASE_URL" >> .env
 
-      - name: Display env file
-        run: cat .env
+            - name: Display env file
+              run: cat .env
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+            - name: Cypress run
+              uses: cypress-io/github-action@v6
