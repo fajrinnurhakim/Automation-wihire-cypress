@@ -6,9 +6,6 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
-            # copy .env
-            - name: Copy .env file
-              run: cp .env .github/workflows/.env
             # and run all Cypress tests
             - name: Cypress run
               uses: cypress-io/github-action@v6
