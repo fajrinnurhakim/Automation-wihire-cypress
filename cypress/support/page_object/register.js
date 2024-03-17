@@ -56,7 +56,7 @@ class register {
             .click();
         cy.registerJobSeeker1(
             Cypress.env("name_register"),
-            Cypress.env("email_register"),
+            Cypress.env("email_register2"),
             Cypress.env("password_register"),
             Cypress.env("password_confirm_register"),
             Cypress.env("gender_register")
