@@ -1,6 +1,6 @@
 import job_seeker_save from "../../support/page_object/job_seeker/job_seeker_save";
 
-describe("Wihire Website", () => {
+describe("Job Seeker Save Job", () => {
     beforeEach(() => {
         cy.visit(Cypress.env("BASE_URL"));
     });

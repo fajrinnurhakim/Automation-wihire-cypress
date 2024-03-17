@@ -1,6 +1,6 @@
 import list_job from "../../support/page_object/job_company/list_job";
 
-describe("Wihire Website", () => {
+describe("Job Company List Job", () => {
     beforeEach(() => {
         cy.visit(Cypress.env("BASE_URL"));
     });

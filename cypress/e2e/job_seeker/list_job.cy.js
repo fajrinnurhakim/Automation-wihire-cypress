@@ -1,6 +1,6 @@
 import job_seeker_list from "../../support/page_object/job_seeker/job_seeker_list";
 
-describe("Wihire Website", () => {
+describe("Job Seeker List Job", () => {
     beforeEach(() => {
         cy.visit(Cypress.env("BASE_URL"));
     });

@@ -1,6 +1,6 @@
 import login from "../support/page_object/login";
 
-describe("Wihire Website", () => {
+describe("Login", () => {
     beforeEach(() => {
         cy.visit(Cypress.env("BASE_URL"));
     });

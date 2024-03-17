@@ -1,6 +1,6 @@
 import register from "../support/page_object/register";
 
-describe("Wihire Website", () => {
+describe("Register", () => {
     beforeEach(() => {
         cy.visit(Cypress.env("BASE_URL"));
     });

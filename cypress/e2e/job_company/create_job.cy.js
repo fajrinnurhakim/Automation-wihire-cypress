@@ -1,6 +1,6 @@
 import create_job from "../../support/page_object/job_company/create_job";
 
-describe("Wihire Website", () => {
+describe("Job Company Create Job", () => {
     beforeEach(() => {
         cy.visit(Cypress.env("BASE_URL"));
     });
