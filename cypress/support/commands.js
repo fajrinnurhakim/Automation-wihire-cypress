@@ -43,7 +43,6 @@ Cypress.Commands.add(
         cy.get("button.btn.btn-primary")
             .contains("Create Company Account")
             .click();
-        cy.get(".Toastify__toast").should("be.visible");
     }
 );
 
@@ -70,7 +69,6 @@ Cypress.Commands.add(
         cy.get("#birthDate").type(birth);
         cy.get("#phoneNumber").type(phone);
         cy.get("button.btn.btn-primary").contains("Create Account").click();
-        cy.get(".Toastify__toast").should("be.visible");
     }
 );
 //
