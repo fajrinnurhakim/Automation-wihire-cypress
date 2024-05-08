@@ -1,4 +1,4 @@
-# Wihire Website Automation Test Repository
+# Govokasi Landing Page Repository
 
 Link Website [Wihire](https://github.com/wihire)
 
@@ -36,5 +36,5 @@ Make sure you have installed the following software :
 
 4. Run the project
     ```bash
-    npm run cypress
+    npm run dev
     ```
